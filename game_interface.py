@@ -119,7 +119,9 @@ class GameWindow:
             self.screen.blit(text_1, (100 + 55 + 133 * col_rand, 105 + 45 + 133 * row_rand))
             pygame.display.update()
             self.state = self.AI_V1.result(self.state, (row_rand, col_rand))
+            print(self.agent)
             self.agent = self.AI_V1.player(self.agent)
+            print(self.agent)
 
         while self.slash_screen == "battle_game":
             for event in pygame.event.get():
@@ -148,8 +150,6 @@ class GameWindow:
                         else:
                             self.agent = self.AI_V1.player(self.agent)
                             v,(row,col) = self.AI_V1.minimax_decision(self.state)
-                            print((row,col))
-                            print(self.AI_V1.actions(self.state))
                             # if (row,col) in self.AI_V1.actions(self.state):
                             text_2 = self.font_h3.render(self.agent, True, (66, 66, 66))
                             self.screen.blit(text_2, (100 + 55 + 133 * col, 105 + 45 + 133 * row))
@@ -165,11 +165,6 @@ class GameWindow:
                                 self.screen.blit(title_text, (self.screen.get_width() / 2 + 100, 50))
                                 pygame.display.update()
                             self.agent = self.AI_V1.player(self.agent)
-    def draw_game(self):
-        pass
-
-    def draw_game_over(self):
-        pass
 
     def start(self):
         button_x_rect = None

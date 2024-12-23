@@ -1,1 +1,10 @@
-Tic To
+# Tic Tac Toe
+Apply minimax algorithm to tic tac toe game. The game is played by two players, one is human and the other is computer. The computer uses minimax algorithm to play the game. The game is implemented in python.
+
+## How to run the game
+1. Clone the repository
+2. Run the following command in the terminal
+```
+python main.py
+```
+3. The game will start and you can play the game.
